@@ -1,0 +1,16 @@
+{
+  "name": "bamazon_one",
+  "version": "1.0.0",
+  "description": "",
+  "main": "BamazonExecutive.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Connor",
+  "license": "ISC",
+  "dependencies": {
+    "cli-table": "^0.3.1",
+    "mysql": "^2.15.0",
+    "prompt": "^1.0.0"
+  }
+}
