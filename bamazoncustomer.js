@@ -19,7 +19,7 @@ connection.query('SELECT ItemID, ProductName, Price FROM Products', function(err
 
 	//creates a table for the information from the mysql database to be placed
 	var table = new Table({
-		head: ['Item Id#', 'Product Name', 'Price', 'StockQuantity'],
+		head: ['Item Id#', 'Product Name', 'Price'],
 		style: {
 			head: ['blue'],
 			compact: false,
@@ -84,11 +84,7 @@ var purchase = function(){
 					//this creates the variable SaleTotal that contains the total amount the user is paying for this total puchase
 					var saleTotal = res[0].Price * productPurchased[0].Quantity;
 
-					//connect to the mysql database Departments and updates the saleTotal for the id of the item purchased
-					connection.query("UPDATE Departments SET TotalSales = ? WHERE DepartmentName = ?;", [saleTotal, res[0].DepartmentName], function(err, resultOne){
-						if(err) console.log('error: ' + err);
-						return resultOne;
-					})
+					
 
 					console.log('Total: ' + saleTotal);
 
